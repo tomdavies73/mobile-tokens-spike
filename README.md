@@ -23,7 +23,7 @@ swift package dump-package
 swift build
 ```
 
-The whole `dist/` tree and `Package.swift` are ignored by Git on the default branch. The four sample colours are intentionally distinct: magenta `#E6007E`, cyan `#00B8D9`, lime `#A3E635`, and orange `#FF6B35`. The CSS output exposes them as custom properties such as `--core-color-signal-magenta`.
+The whole `dist/` tree and `Package.swift` are ignored by Git on the default branch. The sample colours are intentionally distinct. Version `0.2.0` adds purple `#6D28D9`, yellow `#FACC15`, and `extraLarge` spacing alongside the original tokens. The CSS output exposes colours as custom properties such as `--core-color-signal-magenta`.
 
 ## Publish a release
 
@@ -42,6 +42,8 @@ struct TokenPreview: View {
             Rectangle().fill(DesignTokens.Color.electricCyan)
             Rectangle().fill(DesignTokens.Color.acidLime)
             Rectangle().fill(DesignTokens.Color.warmOrange)
+            Rectangle().fill(DesignTokens.Color.royalPurple)
+            Rectangle().fill(DesignTokens.Color.sunflowerYellow)
         }
         .frame(height: 80)
         .padding(DesignTokens.Spacing.small)
@@ -56,3 +58,7 @@ For a package manifest in another project, use:
 ```
 
 The repository has no SwiftPM manifest on the default branch, so consumers must resolve a release tag.
+
+## Check an update in Xcode
+
+After publishing `v0.2.0`, change an app using the exact `0.1.0` package version to exact `0.2.0` in its package dependency settings, then resolve package versions. The two new colours above and `DesignTokens.Spacing.extraLarge` should become available. An app using a version range from `0.1.0` can instead update package versions within that range.

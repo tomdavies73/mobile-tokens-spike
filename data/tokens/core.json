@@ -20,12 +20,23 @@
         "$type": "color",
         "$value": "#FF6B35",
         "$description": "Distinct sample orange."
+      },
+      "royalPurple": {
+        "$type": "color",
+        "$value": "#6D28D9",
+        "$description": "Distinct sample purple added in version 0.2.0."
+      },
+      "sunflowerYellow": {
+        "$type": "color",
+        "$value": "#FACC15",
+        "$description": "Distinct sample yellow added in version 0.2.0."
       }
     },
     "spacing": {
       "small": { "$type": "number", "$value": 8 },
       "medium": { "$type": "number", "$value": 16 },
-      "large": { "$type": "number", "$value": 24 }
+      "large": { "$type": "number", "$value": 24 },
+      "extraLarge": { "$type": "number", "$value": 32 }
     }
   }
 }
