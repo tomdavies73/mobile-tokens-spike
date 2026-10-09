@@ -1,0 +1,31 @@
+{
+  "core": {
+    "color": {
+      "signalMagenta": {
+        "$type": "color",
+        "$value": "#E6007E",
+        "$description": "Distinct sample magenta."
+      },
+      "electricCyan": {
+        "$type": "color",
+        "$value": "#00B8D9",
+        "$description": "Distinct sample cyan."
+      },
+      "acidLime": {
+        "$type": "color",
+        "$value": "#A3E635",
+        "$description": "Distinct sample lime."
+      },
+      "warmOrange": {
+        "$type": "color",
+        "$value": "#FF6B35",
+        "$description": "Distinct sample orange."
+      }
+    },
+    "spacing": {
+      "small": { "$type": "number", "$value": 8 },
+      "medium": { "$type": "number", "$value": 16 },
+      "large": { "$type": "number", "$value": 24 }
+    }
+  }
+}

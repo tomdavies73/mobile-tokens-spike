@@ -1,0 +1,6 @@
+dist/
+Package.swift
+.build/
+.swiftpm/
+.DS_Store
+node_modules/
