@@ -50,7 +50,7 @@ jobs:
         run: |
           npm ci
           npm run build
-          npm run generate:package -- --name MobileTokens --ios-min-version 13
+          npm run generate:package -- --name MobileTokens --ios-min-version 13 --macos-min-version 10.15
           swift package dump-package >/dev/null
           swift build
 

@@ -6,7 +6,7 @@ This repository tests publishing generated design tokens only in release tags. T
 
 1. `data/tokens/core.json` holds the shared token values, using `$type` and `$value` entries. Its location and core layer are inspired by [Sage's token repository](https://github.com/Sage/design-tokens/tree/master/data/tokens); the sample values here are ours.
 2. `npm run build` uses Style Dictionary to generate `dist/ios/DesignTokens.swift` and `dist/css/tokens.css` from that same source.
-3. `npm run generate:package` creates a root `Package.swift` whose library target uses `dist/ios`.
+3. `npm run generate:package` creates a root `Package.swift` whose library target uses `dist/ios`. It declares iOS 13 and macOS 10.15 as minimum versions so the SwiftUI tokens also compile during the macOS CI build.
 4. The **Release Swift tokens** workflow commits only `dist/ios` and the manifest in a release-only commit, tags that commit, and publishes a GitHub release. It does not push the release commit to the default branch.
 
 Swift Package Manager resolves the Git tag and reads `Package.swift` and `dist/ios` from that tagged commit. The CSS output is built locally but excluded from the release tag. Uploading the files solely as GitHub release assets would not make them available to SwiftPM. The package version comes from the tag, not from `Package.swift`.
