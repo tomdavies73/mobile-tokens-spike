@@ -30,13 +30,29 @@
         "$type": "color",
         "$value": "#FACC15",
         "$description": "Distinct sample yellow added in version 0.2.0."
+      },
+      "scarletRed": {
+        "$type": "color",
+        "$value": "#FF1744",
+        "$description": "Distinct sample scarlet red."
+      },
+      "cobaltBlue": {
+        "$type": "color",
+        "$value": "#155DFC",
+        "$description": "Distinct sample cobalt blue."
+      },
+      "midnightNavy": {
+        "$type": "color",
+        "$value": "#111827",
+        "$description": "Distinct sample midnight navy."
       }
     },
     "spacing": {
       "small": { "$type": "number", "$value": 8 },
       "medium": { "$type": "number", "$value": 16 },
       "large": { "$type": "number", "$value": 24 },
-      "extraLarge": { "$type": "number", "$value": 32 }
+      "extraLarge": { "$type": "number", "$value": 32 },
+      "doubleExtraLarge": { "$type": "number", "$value": 48 }
     }
   }
 }
